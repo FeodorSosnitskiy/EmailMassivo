@@ -43,7 +43,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">E</span>
               </div>
-              <span className="text-xl font-bold text-gradient">EmailFlow</span>
+              <span className="text-xl font-bold text-gradient">emailmassivo</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm">
               {t('footer.description')}
@@ -119,7 +119,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © 2024 EmailFlow. All rights reserved.
+            © 2024 emailmassivo. All rights reserved.
           </p>
           
           <div className="flex items-center space-x-6 text-sm text-muted-foreground">

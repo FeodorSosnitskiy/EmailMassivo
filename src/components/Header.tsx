@@ -48,20 +48,7 @@ const Header = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <img 
-            src="/src/assets/logo-light.svg" 
-            alt="Rusender" 
-            className={`h-5 w-auto transition-all duration-200 ${
-              theme === 'dark' 
-                ? 'brightness-0 invert' 
-                : 'brightness-0 saturate-100'
-            }`}
-            style={{
-              filter: theme === 'dark' 
-                ? 'brightness(0) invert(1)' 
-                : 'brightness(0) saturate(100%) invert(25%) sepia(15%) saturate(1500%) hue-rotate(252deg) brightness(95%) contrast(107%)'
-            }}
-          />
+          <span className="text-xl font-bold text-gradient">emailmassivo</span>
         </div>
 
         {/* Desktop Navigation */}
