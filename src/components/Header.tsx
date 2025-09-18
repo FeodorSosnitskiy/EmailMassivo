@@ -51,7 +51,16 @@ const Header = () => {
           <img 
             src="/src/assets/logo-light.svg" 
             alt="Rusender" 
-            className="h-5 w-auto"
+            className={`h-5 w-auto transition-all duration-200 ${
+              theme === 'dark' 
+                ? 'brightness-0 invert' 
+                : 'brightness-0 saturate-100'
+            }`}
+            style={{
+              filter: theme === 'dark' 
+                ? 'brightness(0) invert(1)' 
+                : 'brightness(0) saturate(100%) invert(25%) sepia(15%) saturate(1500%) hue-rotate(252deg) brightness(95%) contrast(107%)'
+            }}
           />
         </div>
 
