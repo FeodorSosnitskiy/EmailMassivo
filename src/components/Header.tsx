@@ -47,11 +47,12 @@ const Header = () => {
     <header className="glass fixed top-0 left-0 right-0 z-50 border-b border-border/50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">E</span>
-          </div>
-          <span className="text-xl font-bold text-gradient">EmailFlow</span>
+        <div className="flex items-center">
+          <img 
+            src="/src/assets/logo-light.svg" 
+            alt="Rusender" 
+            className="h-5 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}
