@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Moon, Sun, Globe, Menu } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -10,10 +10,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import TrialDialog from '@/components/TrialDialog';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -93,7 +95,7 @@ const Header = () => {
           </Button>
 
           {/* CTA Button */}
-          <Button className="btn-hero hidden sm:flex">
+          <Button className="btn-hero hidden sm:flex" onClick={() => setIsDialogOpen(true)}>
             {t('hero.cta.primary')}
           </Button>
 
@@ -152,7 +154,7 @@ const Header = () => {
                   </Button>
 
                   {/* Mobile CTA */}
-                  <Button className="btn-hero w-full">
+                  <Button className="btn-hero w-full" onClick={() => setIsDialogOpen(true)}>
                     {t('hero.cta.primary')}
                   </Button>
                 </div>
@@ -161,6 +163,8 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
+      
+      <TrialDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </header>
   );
 };

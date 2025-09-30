@@ -80,6 +80,22 @@ const translations = {
     'footer.legal.privacy': 'Privacy Policy',
     'footer.legal.terms': 'Terms of Service',
     'footer.legal.security': 'Security',
+    
+    // Trial Dialog
+    'trial.title': 'Start Your Free Trial',
+    'trial.description': 'Get started with emailmassivo today. No credit card required.',
+    'trial.name.label': 'Full Name',
+    'trial.name.placeholder': 'John Doe',
+    'trial.email.label': 'Email Address',
+    'trial.email.placeholder': 'john@example.com',
+    'trial.password.label': 'Password',
+    'trial.password.placeholder': '••••••••',
+    'trial.submit': 'Create Free Account',
+    'trial.terms': 'By signing up, you agree to our Terms of Service and Privacy Policy',
+    'trial.error.title': 'Error',
+    'trial.error.fields': 'Please fill in all fields',
+    'trial.success.title': 'Success!',
+    'trial.success.description': 'Your trial account has been created. Check your email for next steps.',
   },
   es: {
     // Navigation
@@ -150,6 +166,22 @@ const translations = {
     'footer.legal.privacy': 'Política de Privacidad',
     'footer.legal.terms': 'Términos de Servicio',
     'footer.legal.security': 'Seguridad',
+    
+    // Trial Dialog
+    'trial.title': 'Comienza Tu Prueba Gratuita',
+    'trial.description': 'Empieza con emailmassivo hoy. No se requiere tarjeta de crédito.',
+    'trial.name.label': 'Nombre Completo',
+    'trial.name.placeholder': 'Juan Pérez',
+    'trial.email.label': 'Dirección de Email',
+    'trial.email.placeholder': 'juan@ejemplo.com',
+    'trial.password.label': 'Contraseña',
+    'trial.password.placeholder': '••••••••',
+    'trial.submit': 'Crear Cuenta Gratuita',
+    'trial.terms': 'Al registrarte, aceptas nuestros Términos de Servicio y Política de Privacidad',
+    'trial.error.title': 'Error',
+    'trial.error.fields': 'Por favor completa todos los campos',
+    'trial.success.title': '¡Éxito!',
+    'trial.success.description': 'Tu cuenta de prueba ha sido creada. Revisa tu email para los próximos pasos.',
   },
   pt: {
     // Navigation
@@ -220,6 +252,22 @@ const translations = {
     'footer.legal.privacy': 'Política de Privacidade',
     'footer.legal.terms': 'Termos de Serviço',
     'footer.legal.security': 'Segurança',
+    
+    // Trial Dialog
+    'trial.title': 'Comece Seu Teste Grátis',
+    'trial.description': 'Comece com emailmassivo hoje. Não é necessário cartão de crédito.',
+    'trial.name.label': 'Nome Completo',
+    'trial.name.placeholder': 'João Silva',
+    'trial.email.label': 'Endereço de Email',
+    'trial.email.placeholder': 'joao@exemplo.com',
+    'trial.password.label': 'Senha',
+    'trial.password.placeholder': '••••••••',
+    'trial.submit': 'Criar Conta Gratuita',
+    'trial.terms': 'Ao se cadastrar, você concorda com nossos Termos de Serviço e Política de Privacidade',
+    'trial.error.title': 'Erro',
+    'trial.error.fields': 'Por favor preencha todos os campos',
+    'trial.success.title': 'Sucesso!',
+    'trial.success.description': 'Sua conta de teste foi criada. Verifique seu email para os próximos passos.',
   },
 };
 

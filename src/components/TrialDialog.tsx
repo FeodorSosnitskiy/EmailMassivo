@@ -33,16 +33,16 @@ const TrialDialog = ({ open, onOpenChange }: TrialDialogProps) => {
     // Basic validation
     if (!formData.name || !formData.email || !formData.password) {
       toast({
-        title: "Error",
-        description: "Please fill in all fields",
+        title: t('trial.error.title'),
+        description: t('trial.error.fields'),
         variant: "destructive",
       });
       return;
     }
 
     toast({
-      title: "Success!",
-      description: "Your trial account has been created. Check your email for next steps.",
+      title: t('trial.success.title'),
+      description: t('trial.success.description'),
     });
 
     // Reset form and close dialog
@@ -55,24 +55,24 @@ const TrialDialog = ({ open, onOpenChange }: TrialDialogProps) => {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-gradient">
-            Start Your Free Trial
+            {t('trial.title')}
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Get started with emailmassivo today. No credit card required.
+            {t('trial.description')}
           </DialogDescription>
         </DialogHeader>
         
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">
             <Label htmlFor="name" className="text-foreground">
-              Full Name
+              {t('trial.name.label')}
             </Label>
             <div className="relative">
               <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
               <Input
                 id="name"
                 type="text"
-                placeholder="John Doe"
+                placeholder={t('trial.name.placeholder')}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="pl-10"
@@ -82,14 +82,14 @@ const TrialDialog = ({ open, onOpenChange }: TrialDialogProps) => {
 
           <div className="space-y-2">
             <Label htmlFor="email" className="text-foreground">
-              Email Address
+              {t('trial.email.label')}
             </Label>
             <div className="relative">
               <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
               <Input
                 id="email"
                 type="email"
-                placeholder="john@example.com"
+                placeholder={t('trial.email.placeholder')}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="pl-10"
@@ -99,14 +99,14 @@ const TrialDialog = ({ open, onOpenChange }: TrialDialogProps) => {
 
           <div className="space-y-2">
             <Label htmlFor="password" className="text-foreground">
-              Password
+              {t('trial.password.label')}
             </Label>
             <div className="relative">
               <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
               <Input
                 id="password"
                 type="password"
-                placeholder="••••••••"
+                placeholder={t('trial.password.placeholder')}
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 className="pl-10"
@@ -116,10 +116,10 @@ const TrialDialog = ({ open, onOpenChange }: TrialDialogProps) => {
 
           <div className="flex flex-col gap-3 pt-2">
             <Button type="submit" className="w-full btn-hero">
-              Create Free Account
+              {t('trial.submit')}
             </Button>
             <p className="text-xs text-center text-muted-foreground">
-              By signing up, you agree to our Terms of Service and Privacy Policy
+              {t('trial.terms')}
             </p>
           </div>
         </form>
