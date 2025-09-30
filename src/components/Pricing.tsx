@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Check } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import TrialDialog from '@/components/TrialDialog';
 
 const Pricing = () => {
   const { t } = useLanguage();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -101,12 +103,15 @@ const Pricing = () => {
               <Button 
                 className={`w-full ${plan.featured ? 'btn-hero' : 'btn-hero-outline'}`}
                 size="lg"
+                onClick={() => setIsDialogOpen(true)}
               >
                 {t('pricing.cta')}
               </Button>
             </motion.div>
           ))}
         </div>
+
+        <TrialDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
 
         {/* Additional Info */}
         <motion.div

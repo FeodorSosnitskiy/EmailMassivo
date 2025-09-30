@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Play, Upload, Zap, BarChart3 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import heroImage from '@/assets/hero-dashboard.jpg';
+import TrialDialog from '@/components/TrialDialog';
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const features = [
     {
@@ -55,7 +57,10 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button className="btn-hero text-lg px-8 py-4">
+              <Button 
+                className="btn-hero text-lg px-8 py-4"
+                onClick={() => setIsDialogOpen(true)}
+              >
                 {t('hero.cta.primary')}
               </Button>
               <Button variant="outline" className="btn-hero-outline text-lg px-8 py-4">
@@ -63,6 +68,8 @@ const Hero = () => {
                 {t('hero.cta.secondary')}
               </Button>
             </div>
+
+            <TrialDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
 
             {/* Process Steps */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
